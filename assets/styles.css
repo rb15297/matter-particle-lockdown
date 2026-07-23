@@ -78,8 +78,7 @@ a { color: var(--primary); }
   max-width: 100%;
   width: 100%;
 }
-.room-scene img, .celebrate-scene img, .final-scene img,
-.celebrate-scene video, .final-scene video {
+.room-scene img, .celebrate-scene img, .final-scene img {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -93,13 +92,25 @@ a { color: var(--primary); }
   margin-left: auto;
   margin-right: auto;
 }
-.celebrate-scene img, .celebrate-scene video { max-height: 200px; }
+.celebrate-scene img { max-height: 200px; }
 .final-scene {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
-.final-scene img, .final-scene video { max-height: 200px; }
+.final-scene img { max-height: 200px; }
+/* Force a square playback box — some Grok exports ship a bad tkhd matrix */
+.celebrate-scene video, .final-scene video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center;
+  background: #0f172a;
+}
 [data-final-win] {
   text-align: center;
   overflow: hidden;
