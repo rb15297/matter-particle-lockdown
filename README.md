@@ -1,4 +1,3 @@
-# Matter Particle Lockdown — Student Site
+# Matter Particle Lockdown — student site
 
-Public student escape-room pages for GitHub Pages.
-Teacher PDFs and answer keys are not published here.
+Self-paced Google Site pack for classroom use. Teacher guides and answer keys are not included.

@@ -78,7 +78,8 @@ a { color: var(--primary); }
   max-width: 100%;
   width: 100%;
 }
-.room-scene img, .celebrate-scene img, .final-scene img {
+.room-scene img, .celebrate-scene img, .final-scene img,
+.celebrate-scene video, .final-scene video {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -92,13 +93,13 @@ a { color: var(--primary); }
   margin-left: auto;
   margin-right: auto;
 }
-.celebrate-scene img { max-height: 200px; }
+.celebrate-scene img, .celebrate-scene video { max-height: 200px; }
 .final-scene {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
-.final-scene img { max-height: 200px; }
+.final-scene img, .final-scene video { max-height: 200px; }
 [data-final-win] {
   text-align: center;
   overflow: hidden;
