@@ -6,9 +6,10 @@
   <title>Challenge 3A</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
-<body>
+<body class="scene-overlay">
 
-<main class="wrap">
+<div class="scene-bg" style="background-image:url('../assets/scenes/3A.png')"></div>
+<aside class="scene-pane">
   
 <div class="room-banner" style="background:#E67E22">
   <div class="badge">Room 3</div>
@@ -18,10 +19,9 @@
        data-challenge-ids='["3A", "3B", "3C", "3D"]' data-current="3A"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
 </div>
 
-  <div class="card">
-    <p class="meta">5-PS1-3 · Patterns</p>
-    <h2>Challenge 1 of 4</h2>
-    <p>A student has 4 unknown substances:
+  <p class="meta">5-PS1-3 · Patterns</p>
+  <h2>Challenge 1 of 4</h2>
+  <p>A student has 4 unknown substances:
 
   W: dissolves in water, white powder
   X: does not dissolve, silver solid, magnetic
@@ -29,12 +29,11 @@
   Z: does not dissolve, brown powder, not magnetic
 
 The teacher says one substance is iron. Which one is it?</p>
-    <div class="choices" data-choices data-room="3" data-challenge-id="3A">
-      <button type="button" class="choice" data-letter="A">A) Substance Z</button><button type="button" class="choice" data-letter="B">B) Substance W</button><button type="button" class="choice" data-letter="C">C) Substance Y</button><button type="button" class="choice" data-letter="D">D) Substance X</button>
-    </div>
+  <div class="choices" data-choices data-room="3" data-challenge-id="3A">
+    <button type="button" class="choice" data-letter="A">A) Substance Z</button><button type="button" class="choice" data-letter="B">B) Substance W</button><button type="button" class="choice" data-letter="C">C) Substance Y</button><button type="button" class="choice" data-letter="D">D) Substance X</button>
   </div>
   <div class="nav"><a class="btn" href="index.html">Back</a><a class="btn accent" href="challenge-3B.html">Challenge 2</a></div>
-</main>
+</aside>
 
 <script src="../assets/room.js"></script>
 </body>
