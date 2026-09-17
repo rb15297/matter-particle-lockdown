@@ -106,14 +106,21 @@
       const img = celebrate && celebrate.querySelector("img");
       if (on) {
         if (vid && celebrate) {
-          celebrate.removeAttribute("hidden");
+          const poster = vid.getAttribute("poster");
+          if (sceneBg && poster) {
+            sceneBg.style.backgroundImage = `url("${poster}")`;
+          }
           const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
           if (reduce) {
+            celebrate.setAttribute("hidden", "");
             vid.pause();
             vid.currentTime = 0;
           } else {
+            celebrate.removeAttribute("hidden");
             vid.currentTime = 0;
-            vid.play().catch(() => {});
+            vid.play().catch(() => {
+              celebrate.setAttribute("hidden", "");
+            });
           }
         } else if (sceneBg && img) {
           sceneBg.style.backgroundImage = `url("${img.getAttribute("src")}")`;
@@ -192,11 +199,21 @@
       const vid = media && media.querySelector("video");
       const img = media && media.querySelector("img");
       if (vid && media) {
-        media.removeAttribute("hidden");
+        const poster = vid.getAttribute("poster");
+        if (sceneBg && poster) {
+          sceneBg.style.backgroundImage = `url("${poster}")`;
+        }
         const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!reduce) {
+        if (reduce) {
+          media.setAttribute("hidden", "");
+          vid.pause();
           vid.currentTime = 0;
-          vid.play().catch(() => {});
+        } else {
+          media.removeAttribute("hidden");
+          vid.currentTime = 0;
+          vid.play().catch(() => {
+            media.setAttribute("hidden", "");
+          });
         }
       } else if (sceneBg && img) {
         sceneBg.style.backgroundImage = `url("${img.getAttribute("src")}")`;
